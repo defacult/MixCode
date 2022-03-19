@@ -21,7 +21,7 @@ def mixup_data( x, y, alpha, runs):
     return np.concatenate(output_x, axis=0), np.concatenate(output_y, axis=0)
 
 
-##### Mixup-Pytorch ################
+
 def mixup_data_refactor( x, y, x_refactor, y_refactor, alpha, runs):
     if runs is None:
         runs = 1
@@ -42,6 +42,8 @@ def mixup_data_refactor( x, y, x_refactor, y_refactor, alpha, runs):
 
 
 
+
+##### Mixup-Pytorch ################
 def mixup_data(x, y, alpha=0.1, runs, use_cuda=True):
     for i in range(runs):
         output_x = torch.Tensor(0)
